@@ -1,74 +1,44 @@
-# MentorSite - IT Career Mentorship Landing Page
+# MentorSite — IT career mentorship landing page
 
-A modern, animated landing page for an IT mentorship service built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+A modern, animated landing page for an IT mentorship service that helps developers and QA engineers break into IT or move to a new role. Built with Next.js, TypeScript, Tailwind CSS and Framer Motion.
 
-## Features
+![Hero](docs/screenshots/hero.jpg)
 
-- **Dark Theme Design**: Sleek, professional dark theme with gradients
-- **Smooth Animations**: Framer Motion animations for engaging user experience
-- **Responsive Layout**: Mobile-first responsive design
-- **TypeScript**: Full type safety throughout the application
-- **Component Structure**: Modular React components for easy maintenance
+![Services](docs/screenshots/services.jpg)
 
-## Components
+## Sections
 
-- **Hero**: Eye-catching hero section with animated call-to-action
-- **Services**: Three service cards highlighting mentorship offerings
-- **Benefits**: Key benefits with hover animations
-- **Testimonials**: Social proof with sample success stories
-- **CTA**: Email capture form and consultation booking
+| Section | Content |
+|---|---|
+| **Hero** | Headline, value proposition and an animated call to action |
+| **Services** | Personal mentor, learning plan, career support |
+| **Benefits** | Why choose the service — with hover animations |
+| **Mentor** | About the mentor |
+| **Pricing** | Mentorship plans |
+| **Testimonials** | Success stories |
+| **CTA** | Email capture and consultation booking (Supabase) |
 
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables:
-   - Copy `.env.local.example` to `.env.local`
-   - Add your Supabase URL and anon key
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) with your browser
-
-## Tech Stack
-
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type safety and better developer experience
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library for smooth transitions
-- **Supabase** - Backend for data storage (configured but not fully integrated)
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── Hero.tsx
-│   ├── Services.tsx
-│   ├── Benefits.tsx
-│   ├── Testimonials.tsx
-│   └── CTA.tsx
-└── lib/
-    └── supabase.ts
+```mermaid
+flowchart LR
+    V([Visitor]) --> H[Hero] --> S[Services] --> B[Benefits] --> M[Mentor] --> P[Pricing] --> T[Testimonials] --> C[CTA form]
+    C -->|email / booking| SB[(Supabase)]
 ```
 
-## Customization
+## Tech stack
 
-- Update content in each component to match your specific mentorship services
-- Modify colors in `tailwind.config.js` and component files
-- Add your actual Supabase configuration for email collection
-- Integrate with your preferred analytics and marketing tools
+Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Framer Motion, Supabase.
 
-## Deployment
+## Getting started
 
-The project is ready to deploy on Vercel, Netlify, or any other Next.js-compatible platform.
+```bash
+npm install
+# create .env.local with your Supabase URL and anon key
+npm run dev        # http://localhost:3000
+```
+
+Production build:
+
+```bash
+npm run build
+npm start
+```
